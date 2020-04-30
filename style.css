@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+  width: 800px; /*固定幅*/
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 150px;
+}
+
+div {
+  flex: 1; /*親にflexがないと効かない*/
+  display: flex;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  width: 150px;
+}
+
+aside {
+  width: 200px;
+}
+
+footer {
+   height: 200px;
+}
+
+
+/*メディアクエリ*/
+@media  screen and (max-width: 900px) {
+  body,nav,aside {
+    width: 100%;
+  }
+
+  div {
+    flex-direction: column; /*横並びを縦並びへ*/
+  }
+
+  main {
+    order: -1; /*並ぶ順番*/
+  }
+
+}
